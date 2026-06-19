@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九游 · 杂志专题</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f7f6f3;
+      font-family: "Georgia", "Noto Serif SC", "Times New Roman", serif;
+      color: #2e2b27;
+      line-height: 1.7;
+      padding: 0 1.2rem;
+    }
+
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 0 2rem;
+    }
+
+    /* hero 横幅 */
+    .hero {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #d9d2c9;
+      padding-bottom: 2rem;
+    }
+
+    .hero-kicker {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8b7f74;
+      margin-bottom: 0.6rem;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: #1a1816;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 small {
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #6b6158;
+      display: block;
+      margin-top: 0.2rem;
+    }
+
+    .hero p {
+      font-size: 0.95rem;
+      color: #5b534c;
+      margin-top: 0.8rem;
+      max-width: 90%;
+    }
+
+    /* 背景说明 */
+    .background {
+      background: #ede9e3;
+      padding: 1.8rem 1.6rem;
+      border-radius: 2px;
+      margin-bottom: 2.8rem;
+      font-size: 0.95rem;
+    }
+
+    .background h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #2a2623;
+      margin-bottom: 0.9rem;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      text-transform: uppercase;
+    }
+
+    .background p {
+      margin-bottom: 0.6rem;
+    }
+
+    .background p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 三段介绍 */
+    .essay {
+      margin-bottom: 1.2rem;
+    }
+
+    .essay-intro {
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      color: #3f3a35;
+    }
+
+    .essay-item {
+      margin-bottom: 2.4rem;
+    }
+
+    .essay-item h3 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #1f1c19;
+      margin-bottom: 0.5rem;
+      border-left: 3px solid #b3a69b;
+      padding-left: 1rem;
+    }
+
+    .essay-item p {
+      font-size: 0.95rem;
+      color: #3d3732;
+      margin-top: 0.1rem;
+    }
+
+    .essay-item em {
+      font-style: italic;
+      color: #7b6e63;
+    }
+
+    /* 引述/提示 */
+    .note {
+      margin: 2.8rem 0 2.5rem;
+      padding: 1.2rem 1.6rem;
+      background: #f2efeb;
+      border-left: 4px solid #b7aba0;
+      font-size: 0.92rem;
+      color: #3a3430;
+    }
+
+    .note a {
+      color: #2e2b27;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #b7aba0;
+    }
+
+    .note a:hover {
+      color: #000;
+      text-decoration-color: #2e2b27;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      border-top: 1px solid #d9d2c9;
+      padding-top: 2rem;
+      margin-top: 2rem;
+    }
+
+    .faq-summary h4 {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: #1a1816;
+      margin-bottom: 0.8rem;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #2f2a26;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      font-size: 0.9rem;
+      color: #534b44;
+      margin-left: 0.6rem;
+    }
+
+    /* 页尾 */
+    .footer-note {
+      margin-top: 3.5rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #d9d2c9;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #756b62;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-note a {
+      color: #3d3732;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer-note a:hover {
+      color: #0f0d0b;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e3ddd6;
+      margin: 1.8rem 0;
+    }
+
+    @media (max-width: 500px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero h1 small {
+        font-size: 1.3rem;
+      }
+
+      .background,
+      .note {
+        padding: 1.2rem 1rem;
+      }
+
+      .essay-item h3 {
+        font-size: 1.1rem;
+      }
+
+      .page {
+        padding: 1.8rem 0 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero 横幅 -->
+  <div class="hero">
+    <div class="hero-kicker">— 杂志专题 · 站点印象 —</div>
+    <h1>
+      九游
+      <small>可信 · 从容 · 有据</small>
+    </h1>
+    <p>一个关于信息聚合与内容服务的长期实践，在安静中积累，在透明中生长。</p>
+  </div>
+
+  <!-- 背景说明 -->
+  <div class="background">
+    <h2>▸ 背景与由来</h2>
+    <p><a href="https://portal-main-9y.com">九游</a> 并非一个突然出现的名字。它始于对信息筛选与呈现方式的持续思考——如何让用户在一处获得结构清晰、来源可靠的内容，同时避免过度喧嚣的干扰。</p>
+    <p>从早期的内容索引到如今的综合门户形态，这个站点始终围绕「可信」与「可用」两个关键词进行迭代。没有夸大的承诺，只有逐步完善的逻辑与界面。</p>
+  </div>
+
+  <!-- 三段自然介绍 -->
+  <div class="essay">
+    <p class="essay-intro">以下三段文字，分别从定位、结构、与使用者关系三个角度，勾勒出 <a href="https://portal-main-9y.com">九游</a> 的面貌。</p>
+
+    <div class="essay-item">
+      <h3>一、定位：不是入口，是节点</h3>
+      <p><a href="https://portal-main-9y.com">九游</a> 将自己定义为一个信息节点——它不试图成为唯一的起点，而是提供一种经过整理的视野。在这里，分类与标签不是装饰，而是引导。每一块内容都经过筛选与归类，目的是让浏览者更快定位到自己需要的部分，而非被流量逻辑推着走。</p>
+    </div>
+
+    <div class="essay-item">
+      <h3>二、结构：段落与留白同样重要</h3>
+      <p>如果你访问过 <a href="https://portal-main-9y.com">九游</a>，会注意到页面并不拥挤。文字、卡片、间隔——每个元素都有呼吸的空间。这种设计基于一个朴素的判断：当信息被妥善安放，人的注意力会更稳定。结构本身就在传递一种态度——<em>我们不催促你，我们只是呈现</em>。</p>
+    </div>
+
+    <div class="essay-item">
+      <h3>三、关系：使用者与站点相互塑造</h3>
+      <p>一个站点最终的样子，由它的使用者共同描绘。<a href="https://portal-main-9y.com">九游</a> 的调整与变化，往往来自真实的反馈与使用习惯。没有暗藏的陷阱，没有诱导性的话术，只有持续的优化与坦诚的说明。这也是为什么它适合那些希望安静获取信息、不被算法裹挟的人。</p>
+    </div>
+  </div>
+
+  <!-- 提示区块（含链接自然嵌入） -->
+  <div class="note">
+    <p>📌 若你希望了解更多关于站点背后的思路，或只是随处走走，<a href="https://portal-main-9y.com">九游</a> 始终开放。没有弹窗，没有倒计时，只有文字与路径。</p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-summary">
+    <h4>常见问题 · 摘要</h4>
+    <div class="faq-item">
+      <strong>Q：九游 是私人博客还是工具平台？</strong>
+      <p>A：更接近一个轻量级的内容门户，兼具索引与展示功能。不依赖第三方广告，内容组织以清晰为首要目标。</p>
+    </div>
+    <div class="faq-item">
+      <strong>Q：内容更新频率如何？</strong>
+      <p>A：根据信息价值与结构需求更新，不追求固定周期。每次调整都会以可读性为先。</p>
+    </div>
+    <div class="faq-item">
+      <strong>Q：如何反馈建议？</strong>
+      <p>A：站点下方保留联系示意（非邮件/表单形式），也欢迎通过日常浏览感受页面本身——每一处细节都是回应。</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- 页尾访问提示 -->
+  <div class="footer-note">
+    <p>— 杂志专题 · 独立呈现 —</p>
+    <p style="margin-top: 0.6rem;">
+      你可以随时前往 <a href="https://portal-main-9y.com">九游</a>，<br>
+      在那里，信息以它本来的样子被安放。
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
